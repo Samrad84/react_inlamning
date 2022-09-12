@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
     const [navLinkOpen, navLinkToggle] = useState(false);
@@ -22,13 +24,13 @@ const renderClasses = ()  => {
 return (
         <nav>
             <div className="logo">
-                <h4>Sc<i className="fa-solid fa-futbol"></i>reB<i className="fa-solid fa-futbol"></i>ard</h4>
+                <h4><Link to="/">Sc<i className="fa-solid fa-futbol"></i>reB<i className="fa-solid fa-futbol"></i>ard</Link> </h4>
             </div>
             <ul className={renderClasses()}>
-                <li className="link"> <a href="#">Home</a></li>
-                <li className="link"> <a href="#">Players</a></li>
-                <li className="link"> <a href="#">Matches</a></li>
-                <li className="link"> <a href="#">Contact</a></li>
+              
+                <li className="link">  <Link to="/Matches">Matches</Link></li>
+                <li className="link">  <Link to="/Players">Players</Link></li>
+                <li className="link">  <Link to="/Teams">Teams</Link></li>
             </ul>
             <div  onClick={handleNavLinksToggle} className="hamburger-toggle">
                 <i className="fas fa-bars fa-lg"></i>
