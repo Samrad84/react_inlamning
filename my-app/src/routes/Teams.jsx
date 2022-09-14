@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar';
 const Teams = () => {
 	return (
 		<div>
-			This is my Teams page
-			<Navbar />
-		</div>
+            <Navbar />
+            <div className="main"></div>
+        </div>
 	);
 }
 

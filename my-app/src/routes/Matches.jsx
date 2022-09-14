@@ -4,10 +4,9 @@ import Navbar from '../components/Navbar';
 const Matches = () => {
 	return (
 		<div>
-			This is my Matches page
-
             <Navbar />
-		</div>
+            <div className="main"></div>
+        </div>
 	);
 }
 

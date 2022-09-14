@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar';
 const Players = () => {
 	return (
 		<div>
-			This is my Players page
             <Navbar />
-		</div>
+            <div className="main"></div>
+        </div>
 	);
 }
 
