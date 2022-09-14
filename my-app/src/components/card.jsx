@@ -1,10 +1,9 @@
 
-import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from "react";
-import "../components/styles.css";
+import "./styles.css";
 
 
-export default function Matches() {
+export default function Card() {
 
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
@@ -28,8 +27,7 @@ export default function Matches() {
     }, []);
 
     return (
-        <div className='main' >
-          <Navbar />
+        <div >
            
             {loading ? (
                 <div>Loading your data!</div>
