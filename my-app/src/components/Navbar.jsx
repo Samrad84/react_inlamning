@@ -8,35 +8,35 @@ const Navbar = () => {
 
     const handleNavLinksToggle = () => {
         navLinkToggle(!navLinkOpen)
-};
-const renderClasses = ()  => {
+    };
+    const renderClasses = () => {
 
-    let classes = "navlinks";
-    if(navLinkOpen){
-        classes += " activ"
-    }
-    return classes;
-
-
-};
+        let classes = "navlinks";
+        if (navLinkOpen) {
+            classes += " activ"
+        }
+        return classes;
 
 
-return (
+    };
+
+
+    return (
         <nav>
             <div className="logo">
                 <h4><Link to="/">Sc<i className="fa-solid fa-futbol"></i>reB<i className="fa-solid fa-futbol"></i>ard</Link> </h4>
             </div>
             <ul className={renderClasses()}>
-              
-            <li className="link">  <Link to="/Home">Home</Link></li>
 
-           
+                <li className="link">  <Link to="/Home">Home</Link></li>
+
+
 
 
                 <li className="link">  <Link to="/Players">Players</Link></li>
                 <li className="link">  <Link to="/Teams">Teams</Link></li>
             </ul>
-            <div  onClick={handleNavLinksToggle} className="hamburger-toggle">
+            <div onClick={handleNavLinksToggle} className="hamburger-toggle">
                 <i className="fas fa-bars fa-lg"></i>
             </div>
         </nav>

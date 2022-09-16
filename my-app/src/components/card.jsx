@@ -28,7 +28,7 @@ export default function Card() {
 
     return (
         <div >
-           
+
             {loading ? (
                 <div>Loading your data!</div>
             ) :
@@ -36,42 +36,28 @@ export default function Card() {
                     <div>There was an error. Please try again later</div>
                 ) : (
                     data.teams.map((item) => {
-                      
-                        return(
-                       
 
-                            /*< div className = "card" >
-                                
-    <div className="card__body">
-    <h2> {item.strLeague}</h2>
+                        return (
 
-    <img src = {item.strTeamFanart1} />
-    <h2 className="card__title"> {item.strTeam}</h2>
-    <p className="card__description"> {item.strStadium}</p>
-    
-    </div>
-    <a href= {item.strWebsite}><button className="card__btn">Home page</button></a>
-  </div>
-    
-         */
-  <div class="card">
-  <img src= {item.strTeamFanart1} alt="Sample photo"/>
-  <div class="text">
-    <h3>{item.strTeam}</h3>
-    <p>{item.strStadium}</p>
-    <a href={item.strWebsite}><button >Home Page</button></a>
-  </div>
-</div>           
+
+                            <div class="card">
+                                <img src={item.strTeamFanart1} alt="Sample photo" />
+                                <div class="text">
+                                    <h3>{item.strTeam}</h3>
+                                    <p>{item.strStadium}</p>
+                                    <a href={item.strWebsite}><button >Home Page</button></a>
+                                </div>
+                            </div>
 
 
 
+                        );
+                    })
+                )
+                )}
+
+        </div>
     );
-})
-)
-)}
-
-</div>
-);
 };
 
 

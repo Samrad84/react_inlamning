@@ -29,8 +29,8 @@ export default function Matches() {
 
     return (
         <div className='main' >
-          <Navbar />
-           
+            <Navbar />
+
             {loading ? (
                 <div>Loading your data!</div>
             ) :
@@ -38,48 +38,35 @@ export default function Matches() {
                     <div>There was an error. Please try again later</div>
                 ) : (
                     data.teams.map((item) => {
-                      
-                        return(
-                       
 
-                            /*< div className = "card" >
-                                
-    <div className="card__body">
-    <h2> {item.strLeague}</h2>
-
-    <img src = {item.strTeamFanart1} />
-    <h2 className="card__title"> {item.strTeam}</h2>
-    <p className="card__description"> {item.strStadium}</p>
-    
-    </div>
-    <a href= {item.strWebsite}><button className="card__btn">Home page</button></a>
-  </div>
-    
-         */
-  <div className="card">
-  <img src= {item.strTeamFanart1} alt="Sample photo"/>
-  <div className="text">
-    <h2>{item.strTeam}</h2>
-    <p>{item.strStadium}</p>
-    <button
-    type="button"
-    onClick={(e) => {
-      e.preventDefault();
-      window.location.href="https://" + item.strWebsite;
-      }}
->Home Page</button>
-  </div>
-</div>           
+                        return (
 
 
 
+                            <div className="card">
+                                <img src={item.strTeamFanart1} alt="Sample photo" />
+                                <div className="text">
+                                    <h2>{item.strTeam}</h2>
+                                    <p>{item.strStadium}</p>
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            window.location.href = "https://" + item.strWebsite;
+                                        }}
+                                    >Home Page</button>
+                                </div>
+                            </div>
+
+
+
+                        );
+                    })
+                )
+                )}
+
+        </div>
     );
-})
-)
-)}
-
-</div>
-);
 };
 
 
