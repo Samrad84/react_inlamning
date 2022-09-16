@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from "react";
 import "../components/styles.css";
+import Table from 'react-bootstrap/Table';
 
 
 export default function Matches() {
@@ -12,7 +13,7 @@ export default function Matches() {
 
     useEffect(() => {
         fetch(
-            "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=English%20Premier%20League"
+            "https://www.thesportsdb.com/api/v1/json/2/searchfilename.php?e=English_Premier_League_2022-09-17"
         )
             .then((response) => response.json())
             .then((apiData) => {
@@ -37,7 +38,7 @@ export default function Matches() {
                 (error ? (
                     <div>There was an error. Please try again later</div>
                 ) : (
-                    data.teams.map((item) => {
+                    data.event.map((item) => {
                       
                         return(
                        
@@ -55,7 +56,7 @@ export default function Matches() {
     <a href= {item.strWebsite}><button className="card__btn">Home page</button></a>
   </div>
     
-         */
+         
   <div class="card">
   <img src= {item.strTeamFanart1} alt="Sample photo"/>
   <div class="text">
@@ -64,10 +65,34 @@ export default function Matches() {
     <a href={item.strWebsite}><button >Home Page</button></a>
   </div>
 </div>           
+*/
+<table className='table'>
+    
+
+   
+  <tr>
+    <th>#</th>
+    <th>Teams</th>
+    <th>Date</th>
+    <th>Result</th>
+  </tr>
+
+<tbody>
+  <tr>
+    <td>{item.strLeague}</td>
+    <td>{item.strEvent}</td>
+    <td>{item.dateEvent}</td>
+    <td>{item.intHomeScore} -- {item.intAwayScore}</td>
+  </tr>
+
+</tbody>
+</table>
+);
 
 
 
-    );
+
+    
 })
 )
 )}

@@ -56,12 +56,18 @@ export default function Matches() {
   </div>
     
          */
-  <div class="card">
+  <div className="card">
   <img src= {item.strTeamFanart1} alt="Sample photo"/>
-  <div class="text">
-    <h3>{item.strTeam}</h3>
+  <div className="text">
+    <h2>{item.strTeam}</h2>
     <p>{item.strStadium}</p>
-    <a href={item.strWebsite}><button >Home Page</button></a>
+    <button
+    type="button"
+    onClick={(e) => {
+      e.preventDefault();
+      window.location.href="https://" + item.strWebsite;
+      }}
+>Home Page</button>
   </div>
 </div>           
 

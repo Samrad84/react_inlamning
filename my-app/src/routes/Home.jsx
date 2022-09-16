@@ -12,7 +12,8 @@ export default function Matches() {
 
     useEffect(() => {
         fetch(
-            "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=English%20Premier%20League"
+           
+            "https://www.thesportsdb.com/api/v1/json/2/eventslast.php?id=133602"
         )
             .then((response) => response.json())
             .then((apiData) => {
@@ -29,7 +30,11 @@ export default function Matches() {
 
     return (
         <div className='main' >
+
+          
           <Navbar />
+
+     
            
             {loading ? (
                 <div>Loading your data!</div>
@@ -37,7 +42,7 @@ export default function Matches() {
                 (error ? (
                     <div>There was an error. Please try again later</div>
                 ) : (
-                    data.teams.map((item) => {
+                    data.results.map((item) => {
                       
                         return(
                        
@@ -57,11 +62,17 @@ export default function Matches() {
     
          */
   <div class="card">
-  <img src= {item.strTeamFanart1} alt="Sample photo"/>
+  <img src= {item.strThumb} alt="Sample photo"/>
   <div class="text">
-    <h3>{item.strTeam}</h3>
-    <p>{item.strStadium}</p>
-    <a href={item.strWebsite}><button >Home Page</button></a>
+    <h3>{item.strEvent}</h3>
+    <p>{item.dateEvent}</p> 
+    <button
+    type="button"
+    onClick={(e) => {
+      e.preventDefault();
+      window.location.href="https://www.uefa.com/uefachampionsleague/"
+      }}
+>Upcoming Matches</button>
   </div>
 </div>           
 

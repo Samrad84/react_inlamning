@@ -19,11 +19,9 @@ const App = () => {
     return (
         <div>
             <Navbar />
+            
           
-            <div className="main">
-                
-      
-            </div>
+          
            
         </div>
     );
@@ -37,7 +35,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<BrowserRouter>
 		<Routes>
-			<Route path="/" element={<App />} />
+			<Route path="/" element={<Home />} />
 			
 			<Route path="/teams" element={<Teams />} />
             <Route path="/matches" element={<Matches />} />
