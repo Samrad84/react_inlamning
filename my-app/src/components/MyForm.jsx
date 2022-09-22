@@ -15,38 +15,38 @@ export default function MyForm() {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}))
+    setInputs(values => ({ ...values, [name]: value }))
 
-    
-    
+
+
   }
-  
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     console.log(inputs);
 
   }
 
   return (
     <div>
-    <form className="App" onSubmit={handleSubmit}>
-      <label>Enter your name:
-      <input 
-        type="text" 
-        name="username" 
-        value={inputs.username || ""} 
-        onChange={handleChange}
-      />
-      </label>
-    
-        <input type="submit"  />
+      <form className="App" onSubmit={handleSubmit}>
+        <label>Enter your name:
+          <input
+            type="text"
+            name="username"
+            value={inputs.username || ""}
+            onChange={handleChange}
+          />
+        </label>
+
+        <input type="submit" />
 
         <h1>Hi  {inputs.username} Welcome To ScoreBoard! </h1>
-    </form>
-    
-   
+      </form>
+
+
     </div>
   )
 }

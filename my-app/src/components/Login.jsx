@@ -24,13 +24,13 @@ function Login() {
   };
   return (
     <>
-     
+
 
       <form className="App" onSubmit={handleSubmit(onSubmit)}>
-      <h2>Login</h2>
+        <h2>Login</h2>
         <input type="email" placeholder="Email" {...register("email", { required: true })} />
         {errors.email && <span style={{ color: "red" }}>
-         *Email* is mandatory </span>}
+          *Email* is mandatory </span>}
         <input type="password" placeholder="Password" {...register("password")} />
         <input type={"submit"} style={{ backgroundColor: "#a1eafb" }} />
       </form>

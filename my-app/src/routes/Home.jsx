@@ -21,12 +21,12 @@ export default function Matches() {
             .then((apiData) => {
                 setData(apiData);
                 setLoading(false);
-             
+
             })
             .catch((err) => {
                 setLoading(false);
                 setError(true);
-            
+
             });
     }, []);
 
@@ -35,10 +35,10 @@ export default function Matches() {
 
 
             <Navbar />
-            
-         
-       
-          
+
+
+
+
 
 
 
@@ -52,27 +52,27 @@ export default function Matches() {
 
                         return (
                             <div>
-                          
 
-                        <h1>UPCOMING MATCHES</h1>
-                            <div class="card">
-                              
-                                <img src={item.strThumb} alt="Sample photo" />
-                                <div class="text">
-                                    <h3>{item.strEvent}</h3>
-                                    <p>{item.dateEvent}</p>
-                                    <button
-                                        type="button"
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            window.location.href = "https://www.premierleague.com/fixtures"
-                                        }}
-                                    >Upcoming Matches</button>
+
+                                <h1>UPCOMING MATCHES</h1>
+                                <div class="card">
+
+                                    <img src={item.strThumb} alt="Sample photo" />
+                                    <div class="text">
+                                        <h3>{item.strEvent}</h3>
+                                        <p>{item.dateEvent}</p>
+                                        <button
+                                            type="button"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                window.location.href = "https://www.premierleague.com/fixtures"
+                                            }}
+                                        >Upcoming Matches</button>
+                                    </div>
+
                                 </div>
-                               
                             </div>
-                            </div>
-                            
+
 
 
 
@@ -80,7 +80,7 @@ export default function Matches() {
                     })
                 )
                 )}
-             
+
         </div>
     );
 };

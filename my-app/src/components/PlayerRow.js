@@ -15,7 +15,7 @@ class PlayerRow extends React.Component {
                         <h3>{this.props.player.strPlayer}</h3>
                         <p className="alt" >   {this.props.player.strTeam} </p>
 
-            
+
                         <button
                             type="button"
                             onClick={(e) => {
@@ -23,11 +23,11 @@ class PlayerRow extends React.Component {
                                 window.location.href = './PlayerPage';
                             }}
                         >Player Page</button>
-                       
+
 
                     </td>
-                    
-                
+
+
                 </tr>
             </tbody>
 

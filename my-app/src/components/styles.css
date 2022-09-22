@@ -3,8 +3,8 @@
   flex-wrap: wrap;
   align-items: stretch;
   flex-direction: row;
-  
- background-image: url("C:\Users\samfa\OneDrive\Desktop\react_inlamning\my-app\src\background-image.jpg");
+
+  background-image: url("C:\Users\samfa\OneDrive\Desktop\react_inlamning\my-app\src\background-image.jpg");
   height: auto;
   background-size: auto;
 
@@ -196,22 +196,23 @@ input {
   margin: 5px;
 }
 
-.opta{
-border-collapse: collapse;
-border-spacing: 0;
-width: 100%;
-margin-bottom: 10px;
-max-width: none;
-margin-top: 100px;
+.opta {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  max-width: none;
+  margin-top: 100px;
 }
+
 tbody {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
   background-color: rgb(20, 226, 157);
   max-width: 40px;
- 
- 
+
+
 }
 
 
@@ -221,9 +222,11 @@ form {
   display: block;
   margin-top: 250px;
 }
+
 select:not(:-internal-list-box) {
   overflow: visible !important;
 }
+
 select {
   writing-mode: horizontal-tb !important;
   text-rendering: auto;
@@ -259,7 +262,7 @@ option {
   padding: 0px 2px 1px;
 }
 
-.countries{
+.countries {
   display: flex;
   list-style: none;
   justify-content: space-around;
@@ -274,16 +277,17 @@ option {
 
 }
 
-.countries img{
-max-width: 100%;
-margin: 2px;
+.countries img {
+  max-width: 100%;
+  margin: 2px;
 }
 
-.league{
+.league {
 
   margin: 50px;
   padding: 1vw 1vw;
 }
+
 .league a {
 
   color: aliceblue;

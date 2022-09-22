@@ -32,11 +32,11 @@ root.render(
 	<BrowserRouter>
 		<Routes>
 			<Route path="/" element={<App />} />
-			
+
 			<Route path="/teams" element={<Teams />} />
-            <Route path="/matches" element={<Matches />} />
-            <Route path="/players" element={<Players />} />
-            <Route path="/home" element={<Home />} />
+			<Route path="/matches" element={<Matches />} />
+			<Route path="/players" element={<Players />} />
+			<Route path="/home" element={<Home />} />
 			<Route path="/PlayerPage" element={<PlayerPage />} />
 			<Route path="/prLea" element={<PrLea />} />
 			<Route path="/laliga" element={<LaLiga />} />

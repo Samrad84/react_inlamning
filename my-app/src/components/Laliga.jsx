@@ -46,17 +46,17 @@ export default function LaLiga() {
 
             <div>
                 <ul className="countries">
-                   
+
                     <li className="league" ><a href="/Laliga"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/LaLiga.svg/2560px-LaLiga.svg.png" ></img> Spanish La Liga</a></li>
-                 
-                  
-                  
+
+
+
                 </ul>
-                </div>
+            </div>
 
 
             <Navbar />
-  
+
             <form>
                 <select value={query} onChange={handleChange}>
                     <option value="English Premier League">Premier League</option>
@@ -66,7 +66,7 @@ export default function LaLiga() {
             </form>
 
 
-            
+
 
 
 
@@ -106,17 +106,17 @@ export default function LaLiga() {
                     })
                 )
                 )}
-                        
-      <BackToTop
-        showOnScrollUp={false}
-        showAt={100}
-        speed={100}
-        easing="easeInOutSine"
-       
-      >
-        <span>^</span>
 
-      </BackToTop>
+            <BackToTop
+                showOnScrollUp={false}
+                showAt={100}
+                speed={100}
+                easing="easeInOutSine"
+
+            >
+                <span>^</span>
+
+            </BackToTop>
 
         </div>
     );

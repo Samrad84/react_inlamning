@@ -9,18 +9,18 @@ import MyForm from "./components/MyForm";
 
 
 function App() {
- 
-  
+
+
   return (
- <div>
-    <Navbar/>
- <div className="main">
-  
-   <MyForm />
-   
+    <div>
+      <Navbar />
+      <div className="main">
+
+        <MyForm />
+
+      </div>
+
     </div>
-  
-     </div>
   );
 
 }

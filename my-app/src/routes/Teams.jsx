@@ -47,17 +47,17 @@ export default function Teams() {
 
             <div>
                 <ul className="countries">
-                    <li className="league" ><a href="/Prlea" > <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"/> English Premier League</a></li>
+                    <li className="league" ><a href="/Prlea" > <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png" /> English Premier League</a></li>
                     <li className="league" ><a href="/LaLiga"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/LaLiga.svg/2560px-LaLiga.svg.png" ></img> Spanish La Liga</a></li>
                     <li className="league" ><a href="/BundLiga"> <img src="https://barabetting.com/wp-content/uploads/2015/09/bundesliga.jpg" ></img> German Bundesliga</a></li>
-                  
-                  
+
+
                 </ul>
-                </div>
+            </div>
 
 
             <Navbar />
-  
+
             <form>
                 <select value={query} onChange={handleChange}>
                     <option value="English Premier League">Premier League</option>
@@ -67,7 +67,7 @@ export default function Teams() {
             </form>
 
 
-            
+
 
 
 
@@ -107,17 +107,17 @@ export default function Teams() {
                     })
                 )
                 )}
-             
-      <BackToTop
-        showOnScrollUp={false}
-        showAt={100}
-        speed={100}
-        easing="easeInOutSine"
-       
-      >
-        <span>^</span>
 
-      </BackToTop>
+            <BackToTop
+                showOnScrollUp={false}
+                showAt={100}
+                speed={100}
+                easing="easeInOutSine"
+
+            >
+                <span>^</span>
+
+            </BackToTop>
 
         </div>
     );

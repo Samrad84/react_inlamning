@@ -8,14 +8,14 @@ import DatePicker from "react-datepicker";
 
 
 
- 
+
 
 
 
 export default function Matches() {
 
 
- 
+
 
   const [startDate, setStartDate] = useState(new Date());
   const [data, setData] = useState();
@@ -67,7 +67,7 @@ export default function Matches() {
   return (
     <div className='main' >
       <Navbar />
-      
+
 
       {loading ? (
         <div>Loading your data!</div>
@@ -79,22 +79,22 @@ export default function Matches() {
 
             return (
 
-        <div >
-              <table className='opta'>
+              <div >
+                <table className='opta'>
 
-                <tbody className='tbody'>
-                  <tr>
-                    <td>{item.strLeague}</td>
-                    <td>{item.strEvent}</td>
-                    <td>{item.dateEvent}</td>
-                    <td>{item.intHomeScore} -- {item.intAwayScore}</td>
-                 
-                  </tr>
+                  <tbody className='tbody'>
+                    <tr>
+                      <td>{item.strLeague}</td>
+                      <td>{item.strEvent}</td>
+                      <td>{item.dateEvent}</td>
+                      <td>{item.intHomeScore} -- {item.intAwayScore}</td>
 
-                </tbody>
-              </table>
+                    </tr>
+
+                  </tbody>
+                </table>
               </div>
-              
+
             );
 
 

@@ -46,16 +46,16 @@ export default function PrLea() {
 
             <div>
                 <ul className="countries">
-                    <li className="league" ><a href="/prLea" > <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"/> English Premier League</a></li>
-  
-                  
-                  
+                    <li className="league" ><a href="/prLea" > <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png" /> English Premier League</a></li>
+
+
+
                 </ul>
-                </div>
+            </div>
 
 
             <Navbar />
-  
+
             <form>
                 <select value={query} onChange={handleChange}>
                     <option value="English Premier League">Premier League</option>
@@ -65,7 +65,7 @@ export default function PrLea() {
             </form>
 
 
-            
+
 
 
 
@@ -105,17 +105,17 @@ export default function PrLea() {
                     })
                 )
                 )}
-                        
-      <BackToTop
-        showOnScrollUp={false}
-        showAt={100}
-        speed={100}
-        easing="easeInOutSine"
-       
-      >
-        <span>^</span>
 
-      </BackToTop>
+            <BackToTop
+                showOnScrollUp={false}
+                showAt={100}
+                speed={100}
+                easing="easeInOutSine"
+
+            >
+                <span>^</span>
+
+            </BackToTop>
 
         </div>
     );

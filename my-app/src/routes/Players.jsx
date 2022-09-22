@@ -68,7 +68,7 @@ class Players extends Component {
                     width: "99%",
                     paddingTop: 8,
                     paddingLeft: 16,
-                    margin:200
+                    margin: 200
 
                 }} onChange={this.searchChangeHandler.bind(this)} placeholder="Search For a Player By Full Name" />
 
@@ -77,20 +77,20 @@ class Players extends Component {
 
                 {this.state.rows}
 
-        
-                <BackToTop
-        showOnScrollUp={false}
-        showAt={100}
-        speed={100}
-        easing="easeInOutSine"
-       
-      >
-        <span>^</span>
 
-      </BackToTop>
+                <BackToTop
+                    showOnScrollUp={false}
+                    showAt={100}
+                    speed={100}
+                    easing="easeInOutSine"
+
+                >
+                    <span>^</span>
+
+                </BackToTop>
 
             </div>
-        
+
 
         )
     }

@@ -38,7 +38,7 @@ const Navbar = () => {
 
                 <li className="link">  <Link to="/Players">Players</Link></li>
                 <li className="link">  <Link to="/Teams">Teams</Link></li>
-               <li className="link"><DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /></li> 
+                <li className="link"><DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /></li>
             </ul>
             <div onClick={handleNavLinksToggle} className="hamburger-toggle">
                 <i className="fas fa-bars fa-lg"></i>

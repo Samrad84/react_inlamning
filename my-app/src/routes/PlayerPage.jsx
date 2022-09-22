@@ -3,19 +3,19 @@ import '../components/styles.css';
 import Navbar from '../components/Navbar';
 
 function PlayerPage() {
- 
-  
-    return (
-   <div>
-      <Navbar/>
-   <div className="main">
-    
- 
-     
+
+
+   return (
+      <div>
+         <Navbar />
+         <div className="main">
+
+
+
+         </div>
+
       </div>
-    
-       </div>
-    );
-  
-  }
-  export default PlayerPage;
+   );
+
+}
+export default PlayerPage;
