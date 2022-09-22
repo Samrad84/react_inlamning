@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import '../components/styles.css';
 import Registration from '../components/Registration';
 import Login from '../components/Login';
+import BackToTop from "react-back-to-top-button";
 
 
 export default function Matches() {
@@ -54,7 +55,6 @@ export default function Matches() {
                             <div>
 
 
-                                <h1>UPCOMING MATCHES</h1>
                                 <div class="card">
 
                                     <img src={item.strThumb} alt="Sample photo" />
@@ -80,6 +80,16 @@ export default function Matches() {
                     })
                 )
                 )}
+                    <BackToTop
+                    showOnScrollUp={false}
+                    showAt={100}
+                    speed={100}
+                    easing="easeInOutSine"
+
+                >
+                    <span>^</span>
+
+                </BackToTop>
 
         </div>
     );
