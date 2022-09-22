@@ -1,7 +1,9 @@
 
 import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from "react";
-import "../components/styles.css";
+import '../components/styles.css';
+import Registration from '../components/Registration';
+import Login from '../components/Login';
 
 
 export default function Matches() {
@@ -13,18 +15,18 @@ export default function Matches() {
     useEffect(() => {
         fetch(
 
-            "https://www.thesportsdb.com/api/v1/json/2/eventslast.php?id=133602"
+            "https://www.thesportsdb.com/api/v1/json/2/searchfilename.php?e=English_Premier_League_2022-10-01"
         )
             .then((response) => response.json())
             .then((apiData) => {
                 setData(apiData);
                 setLoading(false);
-                console.log(apiData);
+             
             })
             .catch((err) => {
                 setLoading(false);
                 setError(true);
-                console.log(err);
+            
             });
     }, []);
 
@@ -33,6 +35,10 @@ export default function Matches() {
 
 
             <Navbar />
+            
+         
+       
+          
 
 
 
@@ -42,13 +48,15 @@ export default function Matches() {
                 (error ? (
                     <div>There was an error. Please try again later</div>
                 ) : (
-                    data.results.map((item) => {
+                    data.event.map((item) => {
 
                         return (
+                            <div>
+                          
 
-
-         
+                        <h1>UPCOMING MATCHES</h1>
                             <div class="card">
+                              
                                 <img src={item.strThumb} alt="Sample photo" />
                                 <div class="text">
                                     <h3>{item.strEvent}</h3>
@@ -57,11 +65,14 @@ export default function Matches() {
                                         type="button"
                                         onClick={(e) => {
                                             e.preventDefault();
-                                            window.location.href = "https://www.uefa.com/uefachampionsleague/"
+                                            window.location.href = "https://www.premierleague.com/fixtures"
                                         }}
                                     >Upcoming Matches</button>
                                 </div>
+                               
                             </div>
+                            </div>
+                            
 
 
 
@@ -69,7 +80,7 @@ export default function Matches() {
                     })
                 )
                 )}
-
+             
         </div>
     );
 };

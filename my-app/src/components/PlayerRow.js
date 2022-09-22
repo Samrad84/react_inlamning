@@ -1,5 +1,5 @@
 import React from 'react';
-import "../components/styles.css";
+import './styles.css';
 
 class PlayerRow extends React.Component {
 
@@ -14,15 +14,20 @@ class PlayerRow extends React.Component {
                     <td>
                         <h3>{this.props.player.strPlayer}</h3>
                         <p className="alt" >   {this.props.player.strTeam} </p>
+
+            
                         <button
                             type="button"
                             onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = "https://" + this.props.player.strInstagram;
+                                window.location.href = './PlayerPage';
                             }}
-                        >Instagram</button>
+                        >Player Page</button>
+                       
 
                     </td>
+                    
+                
                 </tr>
             </tbody>
 

@@ -3,10 +3,9 @@ import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from "react";
 import '../components/styles.css';
 import BackToTop from "react-back-to-top-button";
-import { ChakraProvider } from '@chakra-ui/react'
 
 
-export default function Teams() {
+export default function BundLiga() {
 
 
 
@@ -17,7 +16,7 @@ export default function Teams() {
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-    const [query, setQuery] = useState("English Premier League");
+    const [query, setQuery] = useState("German Bundesliga");
     const apiUrl = "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=" + query;
     useEffect(() => {
 
@@ -47,8 +46,7 @@ export default function Teams() {
 
             <div>
                 <ul className="countries">
-                    <li className="league" ><a href="/Prlea" > <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"/> English Premier League</a></li>
-                    <li className="league" ><a href="/LaLiga"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/LaLiga.svg/2560px-LaLiga.svg.png" ></img> Spanish La Liga</a></li>
+                    
                     <li className="league" ><a href="/BundLiga"> <img src="https://barabetting.com/wp-content/uploads/2015/09/bundesliga.jpg" ></img> German Bundesliga</a></li>
                   
                   
@@ -107,7 +105,7 @@ export default function Teams() {
                     })
                 )
                 )}
-             
+                        
       <BackToTop
         showOnScrollUp={false}
         showAt={100}

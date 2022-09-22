@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import './styles.css';
+import DatePicker from "react-datepicker";
 
 
 const Navbar = () => {
     const [navLinkOpen, navLinkToggle] = useState(false);
+    const [startDate, setStartDate] = useState(new Date());
 
 
     const handleNavLinksToggle = () => {
@@ -35,6 +38,7 @@ const Navbar = () => {
 
                 <li className="link">  <Link to="/Players">Players</Link></li>
                 <li className="link">  <Link to="/Teams">Teams</Link></li>
+               <li className="link"><DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /></li> 
             </ul>
             <div onClick={handleNavLinksToggle} className="hamburger-toggle">
                 <i className="fas fa-bars fa-lg"></i>

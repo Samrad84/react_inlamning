@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import "../App.css";
+import '../components/styles.css';
 import $ from 'jquery';
 import PlayerRow from '../components/PlayerRow';
 import Navbar from '../components/Navbar';
+import BackToTop from "react-back-to-top-button";
+
 
 
 
@@ -75,9 +77,20 @@ class Players extends Component {
 
                 {this.state.rows}
 
+        
+                <BackToTop
+        showOnScrollUp={false}
+        showAt={100}
+        speed={100}
+        easing="easeInOutSine"
+       
+      >
+        <span>^</span>
 
+      </BackToTop>
 
             </div>
+        
 
         )
     }
